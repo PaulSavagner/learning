@@ -2,8 +2,8 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 
 # Data Preparation
-X = np.array([5, 10, 20, 30, 40]).reshape(-1, 1)  # Weight of the dogs in kg
-y = np.array([14, 13, 10, 8, 7])  # Life expectancy of the dogs in years
+X = np.array([5, 7, 10, 13, 20, 23, 30, 33, 40, 45, 50]).reshape(-1, 1)  # Weight of the dogs in kg
+y = np.array([14, 14, 13, 12, 11, 10, 9, 8, 9, 6, 10])  # Life expectancy of the dogs in years
 
 # Model Creation
 model = LinearRegression()
