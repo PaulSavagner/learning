@@ -11,8 +11,11 @@ model = LinearRegression()
 # Model Training
 model.fit(X, y)
 
+# Ask the user for a weight
+weight_input = input("Please enter a dog's weight in kg: ")
+weight = np.array([float(weight_input)]).reshape(-1, 1)
+
 # Make Predictions
-weight = np.array([25]).reshape(-1, 1)  # Weight of the dog we want to predict the life expectancy of
 predicted_life_expectancy = model.predict(weight)
 
 print("The predicted life expectancy of the dog is: ", predicted_life_expectancy[0], "years.")
