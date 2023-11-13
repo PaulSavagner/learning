@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.module {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sub-module {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.input {
+    text-align: center;
+}
