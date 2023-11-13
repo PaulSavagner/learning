@@ -14,11 +14,50 @@
             <h1>Addition Numbers</h1>
         </div>
         <div class="sub-module">
-            <input type="number" class="inputNumberOne input">
+            <input type="number" class="inputNumberOne input" value="0">
             <p>+</p>
-            <input type="number" class="inputNumberTwo input">
+            <input type="number" class="inputNumberTwo input" value="0">
+        </div>
+        <div class="sub-module result">
+            <p>The first number entered is <span class="firstNumberEntered"></span></p>
+            <p>The second number entered is <span class="secondNumberEntered"></span></p>
+            <p>The result is <span class="showResult"></span></p>
         </div>
     </div>
+
+    <script>
+
+        function addition(inputNumberOne, inputNumberTwo) {
+            if (isNaN(inputNumberOne) || isNaN(inputNumberTwo)) {
+                return "Invalid input";
+            }
+            // Parse the input values as floats to handle decimal numbers
+            const additionResult = parseFloat(inputNumberOne) + parseFloat(inputNumberTwo);
+            return additionResult;
+        }
+
+        let inputNumberOne = document.querySelector('.inputNumberOne');
+        let inputNumberTwo = document.querySelector('.inputNumberTwo');
+        let firstNumberEntered = document.querySelector('.firstNumberEntered')
+        let secondNumberEntered = document.querySelector('.secondNumberEntered')
+        let showResult = document.querySelector('.showResult');
+
+        firstNumberEntered.textContent = inputNumberOne.value;;
+        secondNumberEntered.textContent = inputNumberTwo.value;
+        showResult.textContent = addition(inputNumberOne.value, inputNumberTwo.value)
+
+        function updateResult() {
+            let num1 = inputNumberOne.value;
+            let num2 = inputNumberTwo.value;
+            firstNumberEntered.textContent = num1;
+            secondNumberEntered.textContent = num2;
+            showResult.textContent = addition(num1, num2);
+        }
+        inputNumberOne.addEventListener('input', updateResult);
+        inputNumberTwo.addEventListener('input', updateResult);
+
+
+    </script>
 
 </body>
 

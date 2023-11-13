@@ -2,12 +2,12 @@ body {
     display: flex;
     justify-content: center;
 }
-.module {
+div.module {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.sub-module {
+div.sub-module {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -17,4 +17,10 @@ body {
 
 .input {
     text-align: center;
+}
+
+.sub-module.result {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
