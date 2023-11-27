@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // testing that the console accesses the file
+        console.log("hi");
+        // testing that the console can retrieve a variable
+        let consoleVariableTest = "hi again"
+
+        function gauss(n) {
+            n = (n * (n + 1))/2;
+            return n;
+        }
+
+        function notGauss(n) {
+            let total = 0;
+            let additionSummary = `Explained differently, the total is the addition of ${total}`;
+            for (let i = total; i <= n; i++) {
+                let oldTotal = total;
+                console.log(`The iteration is ${i} and the total before calculation is ${total}`)
+                console.log("Calculating bip boop..")
+                total = i + total;
+                console.log(`${i} + ${oldTotal} = ${total}`);
+                console.log("----------------")
+                additionSummary = `${additionSummary} + ${i}`;
+            }
+            console.log(additionSummary);
+            return total;
+        }
+
+    </script>
+</body>
+</html>
+
+
